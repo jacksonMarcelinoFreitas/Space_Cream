@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+font-family: 'Palanquin', sans-serif;
+font-family: 'Staatliches', cursive; */
+
+:root{
+    --header-collor: #8E9AAF;
+    --background-collor: #EFF1FF;
+    --card-collor: #FEEAFA;
+    --title-font: 'Staatliches', cursive;
+    --text-font: 'Palanquin', sans-serif
+}
+
+.page{
+    margin: auto;
+    text-align: center;
+    max-width: 500px;
+    background-color: var(--background-collor);
+}
+
+header{
+    background-color: var(--header-collor);
+    font-family: var(--title-font);
+    color: #FFFFFF;
+    height: auto;
+    padding-bottom: 32px;
+}
+
+header h1{
+    font-weight: 400;
+    font-size: 40px;
+
+    background-color:#CBC0D3;
+
+    padding: 8px 0;
+    line-height: 34px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main p{
+    margin: 32px;
+    font-family: var(--text-font);
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.img{
+    /* width: 137px; */
+    height: auto;
+    margin: auto;
+    padding: 32px 0;
+}
+
+.img{
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+.card{
+    position: relative;
+}
+
+.card:nth-child(5){
+    padding-bottom: 67px;
+}
+
+.card img{
+    width: 100%;
+    padding: 32px;
+    object-fit: contain;
+    border-radius: 56px;
+}
+
+.card p{
+    font-family: var(--title-font);
+    position: absolute;
+    font-size: 20px;
+    right: 30px;
+    top: 44px;
+    color: #4A4E69;
+    background-color: var(--card-collor);
+    padding: 8px 26px;
+    border-radius: 20px;
+}
+

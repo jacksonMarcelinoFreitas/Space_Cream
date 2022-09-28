@@ -63,11 +63,7 @@ header h1{
 }
 
 main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 3.2rem 6.4rem 3.2rem ;
-    gap: 3.2rem;
+    padding: 0 3.2rem 3.2rem 3.2rem ;
 }
 
 main p{
@@ -81,12 +77,12 @@ main p{
 
 
 .card{
-    min-width: 100%;
     position: relative;
     animation: card_animation .5s 1 backwards;
 }
 
 .card img{
+    margin-bottom: 3.2rem;
     min-width: 100%;
     object-fit: cover;
     border-radius: 2rem;

@@ -17,7 +17,7 @@
 
 /*Mobile version*/
 .page{
-    max-width: 50rem;
+    min-width: 384px;
     margin: 0 auto;
 
     text-align: center;
@@ -103,8 +103,8 @@ main p{
 }
 
 .card img{
-    margin-bottom: 3.2rem;
-    min-width: 100%;
+    /* margin-bottom: 3.2rem; */
+    
     object-fit: cover;
     border-radius: 2rem;
 }
@@ -163,26 +163,6 @@ footer {
 /* Versão Desktop */
 @media (min-width: 900px) {
 
-    main {
-        grid-template-areas: 
-        "A B" 
-        "D B" 
-        "D E";
-    }
-    main .A {
-        grid-area: A;
-    }
-    main .B {
-        grid-area: B;
-    }
-    main .C {
-        grid-area: E;
-    }
-    main .D {
-        grid-area: D;
-    }
-
-
     .page {
         grid-template-areas: 
         "header main" 
@@ -204,11 +184,60 @@ footer {
 }
 
 @media (min-width: 1280px) {
-    main {
+    body{
+        background-color:var(--background-collor);
+    }
+
+    .page {
+        height: 100vh;
         grid-template-areas: 
-        "A B C" 
-        "D B F" 
-        "D E F";
+        "header main" 
+        "header footer";
+        grid-template-columns: 1fr 3fr;
+    }
+    header {
+        grid-area: header;
+        background-color: var(--header-collor);
+    } 
+    
+    header p{
+        color: white;
+        line-height: 3rem;
+    }
+
+    .box{
+        background-color: var(--header-collor)
+    }
+
+    footer {
+        display: block;
+        color: #4A4E69;
+        grid-area: footer;
+    }
+
+    footer p{
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    footer span{
+        font-weight: 700;
+    }
+
+    main {
+        padding: 64px;
+        display: grid;
+        gap: 32px;
+        grid-area: main;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "A C E" 
+        "B C F"
+        "B D F"
+        ;
     }
     main .A {
         grid-area: A;
@@ -217,15 +246,36 @@ footer {
         grid-area: B;
     }
     main .C {
-        grid-area: E;
+        grid-area: C;
     }
     main .D {
         grid-area: D;
     }
     main .E {
-        grid-area: C;
+        grid-area: E;
     }
     main .F {
         grid-area: F;
     }
+
+    .card{
+        position: relative;
+    }
+
+    .card p{
+        font-family: var(--title-font);
+        position: absolute;
+        line-height: 3.4rem;
+        font-size: 2.5rem;
+        right: 4rem;
+        top: -1rem;
+        color: #4A4E69;
+        background-color: var(--card-collor);
+        padding: .8rem 2.6rem;
+        border-radius: 5rem;
+        animation: card_title 1s 1 backwards;
+    }
+
+    
+
 }

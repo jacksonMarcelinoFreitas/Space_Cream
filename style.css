@@ -6,7 +6,7 @@
 
 :root{
     --background-collor: #EFF1FF;
-    --header-collor: #8E9AAF;
+    --header-collor: #4A4E69;
     --card-collor: #FEEAFA;
 
     --title-font: 'Staatliches', cursive;
@@ -172,7 +172,7 @@ footer {
     }
 }
 
-/* Versão Desktop */
+ /*intermediary Screen*/
 @media (min-width: 900px) {
 
     body{
@@ -180,12 +180,15 @@ footer {
     }
 
     .page {
-        height: 100vh;
         grid-template-areas: 
-        "header main" 
-        "header footer";
-        grid-template-columns: 1fr 2fr;
+            "header main" 
+            "header footer";
+
+        grid-template-columns: 1.5fr 2fr;
+
+        height: 100vh;
     }
+    
     header {
         grid-area: header;
         background-color: var(--header-collor);
@@ -235,6 +238,7 @@ footer {
     }
 }
 
+/*Descktop Screen*/
 @media (min-width: 1280px) {
     body{
         background-color:var(--background-collor);
@@ -268,9 +272,10 @@ footer {
     }
 
     footer {
-        display: block;
-        color: #4A4E69;
         grid-area: footer;
+        display: block;
+
+        color: #4A4E69;
     }
 
     footer p{
@@ -279,6 +284,7 @@ footer {
         font-size: 14px;
         line-height: 28px;
         text-align: center;
+
         margin-bottom: 4rem;
     }
 
@@ -287,16 +293,18 @@ footer {
     }
 
     main {
-        padding: 64px;
         display: grid;
+
         gap: 32px;
         grid-area: main;
         grid-template-columns: 1fr 1fr 1fr;
+
         grid-template-areas: 
         "A C E" 
         "B C F"
-        "B D F"
-        ;
+        "B D F";
+
+        padding: 64px;
     }
     main .A {
         grid-area: A;
@@ -319,25 +327,31 @@ footer {
 
     .card{
         width: 81%;
-        position: relative;
-    }
-
-    .card img{
-        width: 100%;
     }
 
     .card p{
         font-family: var(--title-font);
+
         position: absolute;
-        line-height: 3.4rem;
-        font-size: 2.5rem;
         right: -1rem;
         top: -1rem;
-        color: #4A4E69;
-        background-color: var(--card-collor);
+
         padding: .8rem 2.6rem;
+
+        line-height: 2.8rem;
+        font-size: 2.5rem;
         border-radius: 5rem;
+        color: #4A4E69;
+        
+        background-color: var(--card-collor);
+
         animation: card_title 1s 1 backwards;
     }
 
 }
+
+/*
+    By jackson
+    
+    Stage 03 - Avançando no HTML e CSS 
+*/
